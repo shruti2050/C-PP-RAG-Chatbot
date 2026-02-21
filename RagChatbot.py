@@ -14,7 +14,7 @@ st.write("Ask any question related to c++ introduction")
 @st.cache_data
 def load_vectorstore():
     #load document
-    loader = TextLoader("c++_introduction.txt", encoding="utf-8")
+    loader = TextLoader("C++_introduction.txt", encoding="utf-8")
     documents = loader.load()
 
     #split document into chunks
@@ -40,4 +40,5 @@ if query:
     st.subheader('Retrieved Context:')
     for i, doc in enumerate(docs):
         st.markdown(f"**Result {i+1}:**")
+
         st.write(doc.page_content)
